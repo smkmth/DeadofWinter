@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ItemActions : MonoBehaviour{
 
@@ -29,14 +30,31 @@ public class ItemActions : MonoBehaviour{
 	public GameState _GameState;
 	public GameObject objectUsedAgainst;
 	public Weapon weaponBeingUsed;
+	private UnityAction selectedPieceListener;
+	public bool itemNotified;
+	public Item ItemBeingUsed;
+
+
+	void Awake(){
+		selectedPieceListener = new UnityAction (useItem);
+	}
+
+	void OnEnable(){
+		EventManager.StartListening ("PieceSelected", selectedPieceListener);
+	}
+
+	void OnDisable(){
+		EventManager.StopListening ("PieceSelected", selectedPieceListener);
+	}
 
 	public void Start(){
 		_Movement = gameObject.GetComponent<Movement>();
 		_GameState = gameObject.GetComponent<GameState> ();
 		_PlayerControl = gameObject.GetComponent<PlayerControl> ();
-		DisplayItems.itemList.Clear ();		//this just empties the display items list, as 
-											//it should always be empty unless the character is 
-											//actually searching
+		DisplayItems.itemList.Clear ();
+															//this just empties the display items list, as 
+																		//it should always be empty unless the character is 
+																		//actually searching
 
 	}
 
@@ -95,36 +113,20 @@ public class ItemActions : MonoBehaviour{
 
 		
 	}
-	public void UseItem (Item itemBeingUsed){
+	public void SetUpItem (Item itemBeingUsed){
 		
-		Debug.Log("Item is being used" + itemBeingUsed.itemName);
+		Debug.Log ("Item is being used" + itemBeingUsed.itemName);
 		_GameState.gamestate = 2;
 		Debug.Log (_GameState.gamestate);
-		objectUsedAgainst = _PlayerControl.selectedItemPiece;
-		if (objectUsedAgainst != null){
-			Debug.Log ("very distinctive message" + itemBeingUsed.itemName + objectUsedAgainst.GetComponent<Character> ().Name);
-		}
-//			Debug.Log ("break one");
-//			if (itemBeingUsed.itemType == "Weapon") {
-//				Debug.Log ("break two ");
-//				if (objectUsedAgainst.tag == "Player"){
-//					Debug.Log ("break three");
-//					Weapon weaponBeingUsed = itemBeingUsed as Weapon;
-//					Debug.Log ("Health b4 = " + objectUsedAgainst.GetComponent<Character> ().Health);
-//					objectUsedAgainst.GetComponent<Character> ().takeDamage(weaponBeingUsed.damage);
-//					Debug.Log ("Health aftr = " + objectUsedAgainst.GetComponent<Character> ().Health);
-//				}
-//			} else if (itemBeingUsed.itemType == "Food") {
-//				//foodcode
-//			} else if (itemBeingUsed.itemType == "Movement") {
-//				//movement code
-//			} else if (itemBeingUsed.itemType == "Equipment") {
-//				//equipment
-//			}
-//		}
-	
-			
+		ItemBeingUsed = itemBeingUsed;
+		_PlayerControl.selectAPiece = true;
+
+
+
 	}
 
-
+	void useItem(){
+		
+		Debug.Log (_PlayerControl.selectedItemPiece + ItemBeingUsed.itemName);
+	}
 }

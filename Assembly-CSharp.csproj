@@ -3,9 +3,8 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>10.0.20506</ProductVersion>
+    <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <RootNamespace></RootNamespace>
     <ProjectGuid>{2EA80C7F-5868-DF1A-9555-D5881DFC8077}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -34,74 +33,74 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.XML" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="UnityEngine">
-      <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Editor\Data\Managed\UnityEngine.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor">
-      <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Editor\Data\Managed\UnityEditor.dll</HintPath>
     </Reference>
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Actions\ItemActions.cs" />
-     <Compile Include="Assets\Scripts\Actions\Movement.cs" />
-     <Compile Include="Assets\Scripts\Actions\PlayerControl.cs" />
-     <Compile Include="Assets\Scripts\Actions\Zombies.cs" />
-     <Compile Include="Assets\Scripts\Camera\DoubleClickDetectorC.cs" />
-     <Compile Include="Assets\Scripts\Camera\StrateCamC.cs" />
-     <Compile Include="Assets\Scripts\Camera\TransformExtensions.cs" />
-     <Compile Include="Assets\Scripts\Characters\Character.cs" />
-     <Compile Include="Assets\Scripts\Characters\CharacterList.cs" />
-     <Compile Include="Assets\Scripts\Characters\CreateCharacterList.cs" />
-     <Compile Include="Assets\Scripts\Characters\GameItem.cs" />
-     <Compile Include="Assets\Scripts\Managers\DDOL.cs" />
-     <Compile Include="Assets\Scripts\Managers\EventManager.cs" />
-     <Compile Include="Assets\Scripts\Managers\GameState.cs" />
-     <Compile Include="Assets\Scripts\Objects\CreateItemList.cs" />
-     <Compile Include="Assets\Scripts\Objects\Equipment.cs" />
-     <Compile Include="Assets\Scripts\Objects\HumanTile.cs" />
-     <Compile Include="Assets\Scripts\Objects\Item.cs" />
-     <Compile Include="Assets\Scripts\Objects\ItemDeck.cs" />
-     <Compile Include="Assets\Scripts\Objects\ItemEditor.cs" />
-     <Compile Include="Assets\Scripts\Objects\ItemList.cs" />
-     <Compile Include="Assets\Scripts\Objects\Piece.cs" />
-     <Compile Include="Assets\Scripts\Objects\Player.cs" />
-     <Compile Include="Assets\Scripts\Objects\Zombie.cs" />
-     <Compile Include="Assets\Scripts\Places\Colany.cs" />
-     <Compile Include="Assets\Scripts\Places\GasStation.cs" />
-     <Compile Include="Assets\Scripts\Places\GroceryStore.cs" />
-     <Compile Include="Assets\Scripts\Places\Hospital.cs" />
-     <Compile Include="Assets\Scripts\UI\BringToFront.cs" />
-     <Compile Include="Assets\Scripts\UI\Buttons.cs" />
-     <Compile Include="Assets\Scripts\UI\InventoryGui.cs" />
-     <Compile Include="Assets\Scripts\UI\ModelPanel.cs" />
-     <Compile Include="Assets\Scripts\UI\TestModelPanel.cs" />
-     <Compile Include="Assets\Scripts\UI\ZombiePopup.cs" />
-     <Compile Include="Assets\Scripts\Weapon.cs" />
- <Reference Include="UnityEngine.UI">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.Networking">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.TestRunner">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll</HintPath>
- </Reference>
- <Reference Include="nunit.framework">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/nunit.framework.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.Analytics">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.HoloLens">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.VR">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
- </Reference>
+    <Compile Include="Assets\Scripts\Actions\ItemActions.cs" />
+    <Compile Include="Assets\Scripts\Actions\Movement.cs" />
+    <Compile Include="Assets\Scripts\Actions\PlayerControl.cs" />
+    <Compile Include="Assets\Scripts\Actions\Zombies.cs" />
+    <Compile Include="Assets\Scripts\Camera\DoubleClickDetectorC.cs" />
+    <Compile Include="Assets\Scripts\Camera\StrateCamC.cs" />
+    <Compile Include="Assets\Scripts\Camera\TransformExtensions.cs" />
+    <Compile Include="Assets\Scripts\Characters\Character.cs" />
+    <Compile Include="Assets\Scripts\Characters\CharacterList.cs" />
+    <Compile Include="Assets\Scripts\Characters\CreateCharacterList.cs" />
+    <Compile Include="Assets\Scripts\Characters\GameItem.cs" />
+    <Compile Include="Assets\Scripts\Managers\DDOL.cs" />
+    <Compile Include="Assets\Scripts\Managers\EventManager.cs" />
+    <Compile Include="Assets\Scripts\Managers\GameState.cs" />
+    <Compile Include="Assets\Scripts\Objects\CreateItemList.cs" />
+    <Compile Include="Assets\Scripts\Objects\Equipment.cs" />
+    <Compile Include="Assets\Scripts\Objects\HumanTile.cs" />
+    <Compile Include="Assets\Scripts\Objects\Item.cs" />
+    <Compile Include="Assets\Scripts\Objects\ItemDeck.cs" />
+    <Compile Include="Assets\Scripts\Objects\ItemEditor.cs" />
+    <Compile Include="Assets\Scripts\Objects\ItemList.cs" />
+    <Compile Include="Assets\Scripts\Objects\Piece.cs" />
+    <Compile Include="Assets\Scripts\Objects\Player.cs" />
+    <Compile Include="Assets\Scripts\Objects\Zombie.cs" />
+    <Compile Include="Assets\Scripts\Places\Colany.cs" />
+    <Compile Include="Assets\Scripts\Places\GasStation.cs" />
+    <Compile Include="Assets\Scripts\Places\GroceryStore.cs" />
+    <Compile Include="Assets\Scripts\Places\Hospital.cs" />
+    <Compile Include="Assets\Scripts\UI\BringToFront.cs" />
+    <Compile Include="Assets\Scripts\UI\Buttons.cs" />
+    <Compile Include="Assets\Scripts\UI\InventoryGui.cs" />
+    <Compile Include="Assets\Scripts\UI\ModelPanel.cs" />
+    <Compile Include="Assets\Scripts\UI\TestModelPanel.cs" />
+    <Compile Include="Assets\Scripts\UI\ZombiePopup.cs" />
+    <Compile Include="Assets\Scripts\Weapon.cs" />
+    <Reference Include="UnityEngine.UI">
+      <HintPath>C:\Program Files\Unity\Editor\Data\UnityExtensions\Unity\GUISystem\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Networking">
+      <HintPath>C:\Program Files\Unity\Editor\Data\UnityExtensions\Unity\Networking\UnityEngine.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TestRunner">
+      <HintPath>C:\Program Files\Unity\Editor\Data\UnityExtensions\Unity\TestRunner\UnityEngine.TestRunner.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>C:\Program Files\Unity\Editor\Data\UnityExtensions\Unity\TestRunner\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Analytics">
+      <HintPath>C:\Program Files\Unity\Editor\Data\UnityExtensions\Unity\UnityAnalytics\UnityEngine.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.HoloLens">
+      <HintPath>C:\Program Files\Unity\Editor\Data\UnityExtensions\Unity\UnityHoloLens\RuntimeEditor\UnityEngine.HoloLens.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VR">
+      <HintPath>C:\Program Files\Unity\Editor\Data\UnityExtensions\Unity\UnityVR\RuntimeEditor\UnityEngine.VR.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
@@ -111,5 +110,7 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-  
+  <ItemGroup>
+    <Folder Include="Assets\Scripts\" />
+  </ItemGroup>
 </Project>

@@ -26,12 +26,8 @@ public class Character : ScriptableObject {
 	public Equipment bodyEquip;
 	public Equipment legsEquip;
 	public Equipment feetEquip;
+	public Weapon weaponEquip;
 
-	public void takeDamage(int amountDamage){
-
-		Health -= amountDamage;
-		Debug.Log ("taken a hit, health now " + Health);
-	}
 
 
 

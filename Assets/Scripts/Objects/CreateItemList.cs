@@ -1,8 +1,8 @@
 ﻿using System;
 using UnityEngine;
 using System.Collections;
-using UnityEngine;
 using UnityEditor;
+
 
 public class CreateItemList {
 	[MenuItem("Assets/Create/Inventory Item List")]

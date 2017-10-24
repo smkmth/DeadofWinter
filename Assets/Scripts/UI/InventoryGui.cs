@@ -72,7 +72,7 @@ public class InventoryGui : MonoBehaviour{
 			}
 	}
 
-	public void UseItem(){
+	public void SelectItem(){
 		//item is being used
 		Debug.Log ("Click");
 		Debug.Log (EventSystem.current.currentSelectedGameObject.name);
@@ -83,7 +83,7 @@ public class InventoryGui : MonoBehaviour{
 		if (SelectedUI != null) {
 			
 
-			_ItemActions.UseItem (SelectedUI);
+			_ItemActions.SetUpItem (SelectedUI);
 		}
 
 
