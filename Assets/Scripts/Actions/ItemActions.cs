@@ -115,9 +115,8 @@ public class ItemActions : MonoBehaviour{
 	}
 	public void SetUpItem (Item itemBeingUsed){
 		
-		Debug.Log ("Item is being used" + itemBeingUsed.itemName);
+
 		_GameState.gamestate = 2;
-		Debug.Log (_GameState.gamestate);
 		ItemBeingUsed = itemBeingUsed;
 		_PlayerControl.selectAPiece = true;
 
@@ -126,7 +125,25 @@ public class ItemActions : MonoBehaviour{
 	}
 
 	void useItem(){
-		
 		Debug.Log (_PlayerControl.selectedItemPiece + ItemBeingUsed.itemName);
+		if (ItemBeingUsed.itemType == "Weapon") {
+			
+			weaponAttack (ItemBeingUsed, _PlayerControl.selectedItemPiece);
+
+		} else if (ItemBeingUsed.itemType == "Equipment") {
+			
+			equipmentEquip (ItemBeingUsed, _PlayerControl.selectedItemPiece);
+
+		} else {
+
+			Debug.LogError ("Item Type not set");
+
+		}
+
+	}
+
+	public void weaponAttack(Item _Weapon, GameObject _Piece){
+		Debug.Log ("weapon atack");
+		
 	}
 }
