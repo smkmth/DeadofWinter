@@ -8,15 +8,18 @@ public class Movement : MonoBehaviour {
 	//a new position.
 
 	public GameObject SelectedPiece; //The piece selected in player controls
+	public GameObject DeSelectedPiece;
 	public string selectedPieceCurrentLocation; //where that piece is
 
 
 	public void SelectPiece(GameObject _PieceToSelect){
-		if (SelectedPiece) {
-			SelectedPiece.GetComponent<Renderer> ().material.color = Color.gray;
-		}
+//		if (SelectedPiece) {
+//			SelectedPiece.GetComponent<Renderer> ().material.color = Color.yellow;
+//		}
 		SelectedPiece = _PieceToSelect;
 		SelectedPiece.GetComponent<Renderer> ().material.color = Color.red;
+		SelectedPiece.GetComponent<Piece> ().CheckInventory ();
+
 
 	
 
@@ -28,8 +31,14 @@ public class Movement : MonoBehaviour {
 		SelectedPiece.GetComponent<Renderer> ().material.color = Color.gray;
 		SelectedPiece = null;
 	}
+
+
 	public void DeSelectPiece(GameObject _PieceToDeSelect){
-		SelectedPiece.GetComponent<Renderer> ().material.color = Color.gray;
+
+		DeSelectedPiece = _PieceToDeSelect;
+		DeSelectedPiece.GetComponent<Renderer> ().material.color = Color.gray;
+		DeSelectedPiece.GetComponent<Piece> ().ClearInventory ();
+
 	}
 
 
