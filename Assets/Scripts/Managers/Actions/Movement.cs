@@ -1,7 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/// <summary>
+/// Actually moves a player when asked to.
+/// Methods
+/// SelectPiece(gameobject piece you want to select) what happens when you click on a piece. the inventory is displayed 
+/// and the color of the piece turns red
+/// MovePiece(vector3 place you want to go) changes pieces location to the coords passed in the vector3
+/// DeSelectPiece(gameobject piece you want to deselect) Deselcts a piece, setting selected piece to null and changing
+/// colour to grey.
+/// </summary>
 public class Movement : MonoBehaviour {
 
 	//Changes the Color of a player when we click it, and then actually moves the player to
@@ -13,9 +21,7 @@ public class Movement : MonoBehaviour {
 
 
 	public void SelectPiece(GameObject _PieceToSelect){
-//		if (SelectedPiece) {
-//			SelectedPiece.GetComponent<Renderer> ().material.color = Color.yellow;
-//		}
+
 		SelectedPiece = _PieceToSelect;
 		SelectedPiece.GetComponent<Renderer> ().material.color = Color.red;
 		SelectedPiece.GetComponent<Piece> ().CheckInventory ();

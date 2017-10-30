@@ -2,6 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// just tells the world what location the deck is in
+/// variables
+/// string deckLocation returns a string of the location the deck is in
+/// </summary>
 public class ItemDeck : MonoBehaviour {
 
 	public GameObject deckLocationObject;
@@ -12,15 +17,6 @@ public class ItemDeck : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		deckLocation = deckLocationObject.name;
-
-		
 	}
-
-
-	
-	// Update is called once per frame
-	void Update () {
 		
-		
-	}
 }

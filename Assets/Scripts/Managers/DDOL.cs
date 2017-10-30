@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-//The object which holds all the logic of the game is here so it remains constant from scene to 
-//scene.
-
+/// <summary>
+/// DONT DESTROY ON LOAD
+/// attaches to the preload scene and simply stops any obeject this script is attached to 
+/// and any of its children from being destroyed on a load of a new scene. 
+/// </summary>
 public class DDOL : MonoBehaviour {
 
 	public void  Awake(){

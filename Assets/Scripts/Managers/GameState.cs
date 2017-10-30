@@ -2,6 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+///<summary>
+/// Handles the current game state, which changes to allow specific things to happen all over 
+/// the code. the gamestates are 0 for nothing selected, which changes to 1 when a piece is selected
+/// 2 when an item has been selectedd then 3 when a turn changes (colany phase) and 4 for a model dialgue 
+/// window to pause the game
+/// </summary>
 public class GameState : MonoBehaviour {
 
 	//GameStates 0 normal, 1 piece is seleceted, 2 item select, 3 change turn, 4 model dialoge
@@ -9,6 +15,7 @@ public class GameState : MonoBehaviour {
 	public int gamestate = 0;
 
 	private Zombies _Zombies;
+
 
 	//private GroceryStore _GroceryStore;
 
