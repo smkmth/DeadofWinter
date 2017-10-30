@@ -15,7 +15,8 @@ public class Piece : MonoBehaviour {
 	public string currentLocation; //the current location is passed to the player piece from the 
 									//places he visits not set here
 	public string characterName;	//this is set by the pieces character object
-								
+	public int Health;
+
 	//private PlayerControl _PlayerControl;
 
 	public Character _Character;	//this is a generic reference to whatever character is set to 
@@ -28,9 +29,10 @@ public class Piece : MonoBehaviour {
 		
 		//_PlayerControl = GameObject.Find("GameFlow").GetComponent<PlayerControl>();
 		_InventoryGui = GameObject.Find ("CharInventory").GetComponent<InventoryGui>();
+
 		//Debug.Log (this.gameObject.name); 
 
-			
+		Health = _Character.Health;	
 		characterName = _Character.Name;
 		//Debug.Log ("Itesm number" + _Character.Inv.itemList.Count);
 		Noise = _Character.BaseNoise + _Character.Inv.itemList.Count;
@@ -56,16 +58,32 @@ public class Piece : MonoBehaviour {
 		} else { 
 			Debug.Log("no Items");
 		}
-	
+
+
 	}
-//	public void DropItem(Item itemToDrop){
-//
-//	}
+
+	public void ClearInventory(){
+		_InventoryGui.ClearItems ();
+	}
+
+	public void TakeDamage(int damage){
+
+		Health -= damage;
+		Debug.Log (characterName + " has taken " + damage + " damage, his health is now  " + Health);
+	}
+
+	void Update(){
+
+		if (Health <= 0) {
+
+			Destroy (gameObject);
 
 
+		}
+
+	}
 
 
-	
 	
 
 
