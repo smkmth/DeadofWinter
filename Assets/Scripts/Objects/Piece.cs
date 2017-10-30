@@ -4,7 +4,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Piece : MonoBehaviour {
-
+	///<c>
+	/// Controls the piece and sets the unique values to the piece from the 
+	/// character and itemlist classes 
+	/// 
+	/// </c>
 	//the piece class handles the actual physical presence of the character, a character object
 	//handles its stats. 
 
@@ -24,11 +28,11 @@ public class Piece : MonoBehaviour {
 		
 		//_PlayerControl = GameObject.Find("GameFlow").GetComponent<PlayerControl>();
 		_InventoryGui = GameObject.Find ("CharInventory").GetComponent<InventoryGui>();
-		Debug.Log (this.gameObject.name); 
+		//Debug.Log (this.gameObject.name); 
 
 			
 		characterName = _Character.Name;
-		Debug.Log ("Itesm number" + _Character.Inv.itemList.Count);
+		//Debug.Log ("Itesm number" + _Character.Inv.itemList.Count);
 		Noise = _Character.BaseNoise + _Character.Inv.itemList.Count;
 
 		if (_Character.bodyEquip == true) {
@@ -48,13 +52,15 @@ public class Piece : MonoBehaviour {
 
 	public void CheckInventory(){
 		if (_Character.Inv.itemList.Count > 0) {
-			Debug.Log (_Character.Inv.itemList.Count);
 			_InventoryGui.DisplayItems (_Character);
 		} else { 
 			Debug.Log("no Items");
 		}
 	
 	}
+//	public void DropItem(Item itemToDrop){
+//
+//	}
 
 
 

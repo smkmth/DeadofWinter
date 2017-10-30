@@ -9,7 +9,7 @@ public class Zombies : MonoBehaviour {
 	private GroceryStore _GroceryStore;
 	private Hospital _Hospital;
 	private Colany _Colany;
-	private GameState _GameState;
+
 	private GasStation _GasStation;
 	private GameObject GroceryZombie;
 	private GameObject HospitalZombie;
@@ -35,13 +35,6 @@ public class Zombies : MonoBehaviour {
 		_Colany = GameObject.Find ("Colany").GetComponent<Colany> ();
 		_GasStation = GameObject.Find ("GasStation").GetComponent<GasStation> ();
 		_ZombiePopup = GameObject.Find ("Popup Canvas").GetComponent<ZombiePopup> ();
-		
-	
-		_GameState = gameObject.GetComponent<GameState>();
-
-
-
-
 	}
 
 

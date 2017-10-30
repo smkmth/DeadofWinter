@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using System.Collections;
-using UnityEngine;
 using UnityEditor;
 
 public class CreateCharacterList {
