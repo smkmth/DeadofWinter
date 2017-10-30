@@ -2,6 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+///<summary>
+/// controls the hospital, methods are peopleInHospital, which returns with the amount of people in the hospital
+/// a public list of zombie tiles, where zombies can spawn, a list of these coords, and another list which 
+/// tracks the used coords. in general, with the zombies class, this script puts zombies at a random one of many 
+/// possible coords attached to the tile objects. for convieninence i have labled these after cardinal directions.
+/// need to make this more effiecient some time soon.
+/// on top of this, it is attached to a collider, which updates the piece telling it what location it is currently 
+/// in.
+/// </summary>
 public class Hospital : MonoBehaviour {
 
 	//Add more zombie tiles by adding on the game object

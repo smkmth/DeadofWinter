@@ -2,20 +2,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/// <summary>
+/// This class is the physical game piece, it is attached to every game piece, and it has no 
+/// specific data. instead it pulls the data from a scriptable object called character, and 
+/// handles what happens to that data. Piece has the following methods 
+/// MyCurrentLocation() which returns the pieces current location
+/// MyName() which returns the pieces name
+/// CheckInventory() which gives the inventoryGUI class a character scriptable object, whih has an inv 
+/// ClearInventory() which runs the clear items code good for de-selecting 
+/// TakeDamage(damage) which accepts an int, and removes that from Health
+/// 
+/// </summary>
 public class Piece : MonoBehaviour {
-	///<c>
-	/// Controls the piece and sets the unique values to the piece from the 
-	/// character and itemlist classes 
-	/// 
-	/// </c>
-	//the piece class handles the actual physical presence of the character, a character object
-	//handles its stats. 
 
-	public string currentLocation; //the current location is passed to the player piece from the 
-									//places he visits not set here
-	public string characterName;	//this is set by the pieces character object
-	public int Health;
+
+	public string currentLocation; 							//the current location is passed to the player piece from the 
+															//places he visits not set here
+	public string characterName;							//this is set by the pieces character scriptable object
+	public int Health;										//also set by character scriptalbe object
 
 	//private PlayerControl _PlayerControl;
 

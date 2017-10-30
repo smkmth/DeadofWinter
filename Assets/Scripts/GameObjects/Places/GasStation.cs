@@ -2,6 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+///<summary>
+/// controls the gastation, methods are peopleInGasStation, which returns with the amount of people in the gasstation
+/// a public list of zombie tiles, where zombies can spawn, a list of these coords, and another list which 
+/// tracks the used coords. in general, with the zombies class, this script puts zombies at a random one of many 
+/// possible coords attached to the tile objects. for convieninence i have labled these after cardinal directions.
+/// need to make this more effiecient some time soon.
+/// on top of this, it is attached to a collider, which updates the piece telling it what location it is currently 
+/// in.
+/// </summary>
 public class GasStation : MonoBehaviour {
 
 

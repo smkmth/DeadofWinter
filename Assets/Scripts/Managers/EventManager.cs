@@ -3,7 +3,13 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.Events;
-
+/// <summary>
+/// Dont touch this class! it just some weird vodoo which handles unity events. creates a singlton 
+/// instance of event manager,a dictonary of events, allows you to stop listening and start
+/// listening to events, and to run methods from events. 
+/// DO NOT SET UP EVENTS INSIDE THIS CLASS
+/// this class just manages events. You can create a new even as shown in ItemActions.
+/// </summary>
 public class EventManager : MonoBehaviour {
 
 	private Dictionary <string, UnityEvent> eventDictionary;
@@ -11,6 +17,7 @@ public class EventManager : MonoBehaviour {
 	public static EventManager eventManager;
 
 	public static EventManager instance 
+
 	{
 		get {
 

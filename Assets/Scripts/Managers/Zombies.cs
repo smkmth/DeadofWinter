@@ -2,7 +2,11 @@
 using System.Collections;
 using UnityEngine;
 
-
+/// <summary>
+/// Zombies handles how the zombies are spawned, and the behavor the zombies follow.
+/// AddingZombies() adds zombies at the end of a turn.
+/// ZombieFight() runs the zombie attack panel.
+/// </summary>
 public class Zombies : MonoBehaviour {
 
 	//refrence to grocery store 
