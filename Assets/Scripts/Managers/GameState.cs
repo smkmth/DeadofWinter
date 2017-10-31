@@ -15,7 +15,7 @@ public class GameState : MonoBehaviour {
 	public int gamestate = 0;
 
 	private Zombies _Zombies;
-
+	private GameObject[] Characters;
 
 	//private GroceryStore _GroceryStore;
 
@@ -39,6 +39,10 @@ public class GameState : MonoBehaviour {
 			gamestate = 3;
 			Debug.Log ("Gamestate =" + gamestate);
 			_Zombies.AddingZombies ();
+			Characters = GameObject.FindGameObjectsWithTag ("Player");
+			foreach (GameObject piece in Characters) {
+				piece.GetComponent<Piece> ().hasMoved = false;
+			}
 			gamestate = 0;
 			Debug.Log ("EndTurn");
 			Debug.Log ("Gamestate =" + gamestate);

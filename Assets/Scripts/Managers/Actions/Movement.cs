@@ -33,16 +33,22 @@ public class Movement : MonoBehaviour {
 		
 	public void MovePiece(Vector3 _coordToMove)
 	{
-		SelectedPiece.transform.position = _coordToMove;
-		SelectedPiece.GetComponent<Renderer> ().material.color = Color.gray;
-		SelectedPiece = null;
+		if (SelectedPiece.GetComponent<Piece> ().hasMoved == false) {
+			SelectedPiece.transform.position = _coordToMove;
+			SelectedPiece.GetComponent<Renderer> ().material.color = Color.white;
+			SelectedPiece.GetComponent<Piece> ().hasMoved = true;
+			SelectedPiece = null;
+		} else {
+			Debug.Log (SelectedPiece.name + "has already moved this turn!");
+		}
+
 	}
 
 
 	public void DeSelectPiece(GameObject _PieceToDeSelect){
 
 		DeSelectedPiece = _PieceToDeSelect;
-		DeSelectedPiece.GetComponent<Renderer> ().material.color = Color.gray;
+		DeSelectedPiece.GetComponent<Renderer> ().material.color = Color.white;
 		DeSelectedPiece.GetComponent<Piece> ().ClearInventory ();
 
 	}
