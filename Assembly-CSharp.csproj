@@ -69,10 +69,12 @@
      <Compile Include="Assets\Scripts\ScriptableObjects\CreateCharacterList.cs" />
      <Compile Include="Assets\Scripts\ScriptableObjects\CreateItemList.cs" />
      <Compile Include="Assets\Scripts\ScriptableObjects\Equipment.cs" />
+     <Compile Include="Assets\Scripts\ScriptableObjects\Food.cs" />
      <Compile Include="Assets\Scripts\ScriptableObjects\GameItem.cs" />
      <Compile Include="Assets\Scripts\ScriptableObjects\Item.cs" />
      <Compile Include="Assets\Scripts\ScriptableObjects\ItemList.cs" />
      <Compile Include="Assets\Scripts\ScriptableObjects\Player.cs" />
+     <Compile Include="Assets\Scripts\ScriptableObjects\Tool.cs" />
      <Compile Include="Assets\Scripts\ScriptableObjects\Weapon.cs" />
      <Compile Include="Assets\Scripts\UI\OnScreen\Buttons.cs" />
      <Compile Include="Assets\Scripts\UI\OnScreen\InventoryGui.cs" />
