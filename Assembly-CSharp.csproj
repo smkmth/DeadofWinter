@@ -80,6 +80,7 @@
      <Compile Include="Assets\Scripts\UI\OnScreen\CharStatsGui.cs" />
      <Compile Include="Assets\Scripts\UI\OnScreen\InventoryGui.cs" />
      <Compile Include="Assets\Scripts\UI\PopUp\BringToFront.cs" />
+     <Compile Include="Assets\Scripts\UI\PopUp\GameOverPopup.cs" />
      <Compile Include="Assets\Scripts\UI\PopUp\ModelPanel.cs" />
      <Compile Include="Assets\Scripts\UI\PopUp\TestModelPanel.cs" />
      <Compile Include="Assets\Scripts\UI\PopUp\ZombiePopup.cs" />

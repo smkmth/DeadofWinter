@@ -82,6 +82,29 @@ public class ModelPanel : MonoBehaviour{
 
 	}
 
+	public void Choice(string question, Sprite iconImage, UnityAction yesEvent, UnityAction noEvent)
+	{
+		modelPanelObject.SetActive (true);
+		yesButton.onClick.RemoveAllListeners();
+		yesButton.onClick.AddListener (yesEvent);
+		yesButton.onClick.AddListener (ClosePanel);
+
+		noButton.onClick.RemoveAllListeners();
+		noButton.onClick.AddListener (noEvent);
+		noButton.onClick.AddListener (ClosePanel);
+
+
+
+		this.question.text = question;
+		this.iconImage.sprite = iconImage;
+
+		this.iconImage.gameObject.SetActive (true);
+		yesButton.gameObject.SetActive (true);
+		noButton.gameObject.SetActive (true);
+		cancelButton.gameObject.SetActive (true);
+
+
+	}
 
 }
 	
