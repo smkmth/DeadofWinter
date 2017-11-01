@@ -67,6 +67,7 @@ public class GameState : MonoBehaviour {
 
 				LoseTheGame ("You just ran out of time! You couldnt find the cure, and all became flesh eating undead. Game Over. Restart?");
 
+
 			}
 			
 		}

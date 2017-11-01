@@ -39,14 +39,14 @@ public class Piece : MonoBehaviour {
 		_CharStatsGUI = GameObject.Find ("CharStats").GetComponent<CharStatsGui>();
 		//Debug.Log (this.gameObject.name); 
 		hasMoved = false;
-		Health = _Character.Health;	
+		Health = _Character.MaxHealth;	
 		characterName = _Character.Name;
 		//Debug.Log ("Itesm number" + _Character.Inv.itemList.Count);
 		Noise = _Character.BaseNoise + _Character.Inv.itemList.Count;
 
 		if (_Character.bodyEquip == true) {
 			int tempvalue = _Character.bodyEquip.ArmourValue;
-			_Character.Health += tempvalue;
+			_Character.MaxHealth += tempvalue;
 		
 		}
 	}
@@ -73,7 +73,7 @@ public class Piece : MonoBehaviour {
 	}
 
 	public void CheckStats(){
-		_CharStatsGUI.DisplayStats (_Character);
+		_CharStatsGUI.DisplayStats (_Character, gameObject);
 	}
 
 	public void ClearStats(){

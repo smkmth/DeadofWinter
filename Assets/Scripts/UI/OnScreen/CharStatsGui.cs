@@ -19,11 +19,11 @@ public class CharStatsGui : MonoBehaviour {
 	public Text Description;
 	public Text Health;
 	
-	public void DisplayStats(Character _Character){
+	public void DisplayStats(Character _Character, GameObject _Piece){
 		StatPanel.SetActive (true);
 		Name.text = _Character.Name;
 		Description.text = _Character.CharacterDescription;
-		Health.text = _Character.Health.ToString ();
+		Health.text = "Health: " + _Piece.GetComponent<Piece> ().Health.ToString();
 
 	}
 

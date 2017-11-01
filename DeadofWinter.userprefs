@@ -10,9 +10,9 @@
       <File FileName="Assets\Scripts\Managers\DDOL.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\ScriptableObjects\Weapon.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\ScriptableObjects\Tool.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\UI\OnScreen\CharStatsGui.cs" Line="13" Column="63" />
+      <File FileName="Assets\Scripts\UI\OnScreen\CharStatsGui.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\UI\OnScreen\InventoryGui.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\GameObjects\Piece.cs" Line="80" Column="31" />
+      <File FileName="Assets\Scripts\GameObjects\Piece.cs" Line="49" Column="18" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
