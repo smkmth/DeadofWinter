@@ -29,13 +29,15 @@ public class Piece : MonoBehaviour {
 
 	public int Noise;
 
+	public bool hasMoved;
+
 	public void Start(){
 		
 		//_PlayerControl = GameObject.Find("GameFlow").GetComponent<PlayerControl>();
 		_InventoryGui = GameObject.Find ("CharInventory").GetComponent<InventoryGui>();
 
 		//Debug.Log (this.gameObject.name); 
-
+		hasMoved = false;
 		Health = _Character.Health;	
 		characterName = _Character.Name;
 		//Debug.Log ("Itesm number" + _Character.Inv.itemList.Count);
