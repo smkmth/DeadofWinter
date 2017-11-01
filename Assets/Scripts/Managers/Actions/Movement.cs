@@ -25,6 +25,7 @@ public class Movement : MonoBehaviour {
 		SelectedPiece = _PieceToSelect;
 		SelectedPiece.GetComponent<Renderer> ().material.color = Color.red;
 		SelectedPiece.GetComponent<Piece> ().CheckInventory ();
+		SelectedPiece.GetComponent<Piece> ().CheckStats ();
 
 
 	
@@ -50,6 +51,7 @@ public class Movement : MonoBehaviour {
 		DeSelectedPiece = _PieceToDeSelect;
 		DeSelectedPiece.GetComponent<Renderer> ().material.color = Color.white;
 		DeSelectedPiece.GetComponent<Piece> ().ClearInventory ();
+		DeSelectedPiece.GetComponent<Piece> ().ClearStats ();
 
 	}
 
