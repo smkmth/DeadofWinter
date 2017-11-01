@@ -4,16 +4,18 @@ using UnityEngine;
 
 
 
-public class Buttons : MonoBehaviour {
+public class EndTurnButton : MonoBehaviour {
 
 	private GameState _GameState;
 
 	void Awake(){
 		_GameState = GameObject.Find ("GameFlow").GetComponent<GameState>();
+
 	}
 
 	public void NextTurnButton(){
 		if (_GameState.gamestate == 0) {
+			
 			Debug.Log ("ClickedNextTurn");
 			_GameState.EndTurn ();
 		} else {

@@ -76,8 +76,8 @@
      <Compile Include="Assets\Scripts\ScriptableObjects\Player.cs" />
      <Compile Include="Assets\Scripts\ScriptableObjects\Tool.cs" />
      <Compile Include="Assets\Scripts\ScriptableObjects\Weapon.cs" />
-     <Compile Include="Assets\Scripts\UI\OnScreen\Buttons.cs" />
      <Compile Include="Assets\Scripts\UI\OnScreen\CharStatsGui.cs" />
+     <Compile Include="Assets\Scripts\UI\OnScreen\EndTurnButton.cs" />
      <Compile Include="Assets\Scripts\UI\OnScreen\InventoryGui.cs" />
      <Compile Include="Assets\Scripts\UI\PopUp\BringToFront.cs" />
      <Compile Include="Assets\Scripts\UI\PopUp\GameOverPopup.cs" />
