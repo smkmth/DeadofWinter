@@ -25,6 +25,7 @@ public class Movement : MonoBehaviour {
 		SelectedPiece = _PieceToSelect;
 		SelectedPiece.GetComponent<Renderer> ().material.color = Color.red;
 		SelectedPiece.GetComponent<Piece> ().CheckInventory ();
+		SelectedPiece.GetComponent<Piece> ().CheckStats ();
 
 
 	
