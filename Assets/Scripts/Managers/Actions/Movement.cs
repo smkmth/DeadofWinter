@@ -18,7 +18,14 @@ public class Movement : MonoBehaviour {
 	public GameObject SelectedPiece; //The piece selected in player controls
 	public GameObject DeSelectedPiece;
 	public string selectedPieceCurrentLocation; //where that piece is
+	public WarningPopup _WarningPopup;
 
+
+	void Start(){
+
+		_WarningPopup = GameObject.Find ("Popup Canvas").GetComponent<WarningPopup> ();
+
+	}
 
 	public void SelectPiece(GameObject _PieceToSelect){
 
@@ -40,7 +47,10 @@ public class Movement : MonoBehaviour {
 			SelectedPiece.GetComponent<Piece> ().hasMoved = true;
 			SelectedPiece = null;
 		} else {
+			_WarningPopup.warningText = SelectedPiece.name + " has already moved in this turn!";
+			_WarningPopup.WarningPanel ();
 			Debug.Log (SelectedPiece.name + "has already moved this turn!");
+			SelectedPiece = null;
 		}
 
 	}

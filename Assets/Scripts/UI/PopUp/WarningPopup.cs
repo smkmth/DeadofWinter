@@ -4,7 +4,7 @@ using UnityEngine.UI;
 using UnityEngine.Events;
 using System.Collections;
 
-public class GameOverPopup : MonoBehaviour {
+public class WarningPopup : MonoBehaviour {
 
 	private ModelPanel modelPanel;
 
@@ -13,9 +13,9 @@ public class GameOverPopup : MonoBehaviour {
 	//	private UnityAction myCancelAction;
 
 	private GameState _GameState;
-	public Sprite gameOverIcon;
 
-	public string gameOverText = "Too long has passed, and the colany has fallen to dust.";
+	public string warningText;
+
 	void Awake(){
 
 
@@ -33,25 +33,19 @@ public class GameOverPopup : MonoBehaviour {
 	}
 
 
-	public void GameOverPanel(){
+	public void WarningPanel(){
 		Debug.Log ("Attempting test");
 		_GameState.ChangeState (4);
-		modelPanel.Choice (gameOverText, gameOverIcon, GameoverYesFunction, GameoverNoFunction);
+		modelPanel.Choice (warningText, GameoverCancelFunction);
 	}
-	void GameoverYesFunction(){
-		
+	void GameoverCancelFunction(){
+
 		_GameState.ChangeState (0);
-		_GameState.Restart();
 
-
-	}
-
-	void GameoverNoFunction(){
-		_GameState.ChangeState (0);
-		_GameState.Quit ();
 
 
 	}
+
 
 
 

@@ -2,7 +2,10 @@
 using UnityEngine.UI;
 using UnityEngine.Events;
 using System.Collections;
-
+/// <summary>
+/// this is a generic model panel class. You can build a new model panel in multiple ways- 
+/// with a cancel choice, a yes/no/cancel choice, a yes/no/cancel with an image.
+/// </summary>
 public class ModelPanel : MonoBehaviour{
 
 
@@ -25,6 +28,28 @@ public class ModelPanel : MonoBehaviour{
 
 		return modalPanel;
 	}
+
+	public void Choice(string question, UnityAction cancelEvent)
+	{
+		
+		modelPanelObject.SetActive (true);
+		cancelButton.onClick.RemoveAllListeners();
+		cancelButton.onClick.AddListener (cancelEvent);
+		cancelButton.onClick.AddListener (ClosePanel);
+
+
+
+		this.question.text = question;
+
+
+		this.iconImage.gameObject.SetActive (false);
+		yesButton.gameObject.SetActive (false);
+		noButton.gameObject.SetActive (false);
+		cancelButton.gameObject.SetActive (true);
+
+
+	}
+
 	//yes/no/cancel function
 	public void Choice(string question, UnityAction yesEvent, UnityAction noEvent, UnityAction cancelEvent)
 	{
@@ -101,7 +126,7 @@ public class ModelPanel : MonoBehaviour{
 		this.iconImage.gameObject.SetActive (true);
 		yesButton.gameObject.SetActive (true);
 		noButton.gameObject.SetActive (true);
-		cancelButton.gameObject.SetActive (true);
+		cancelButton.gameObject.SetActive (false);
 
 
 	}

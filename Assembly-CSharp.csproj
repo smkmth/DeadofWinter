@@ -83,6 +83,7 @@
      <Compile Include="Assets\Scripts\UI\PopUp\GameOverPopup.cs" />
      <Compile Include="Assets\Scripts\UI\PopUp\ModelPanel.cs" />
      <Compile Include="Assets\Scripts\UI\PopUp\TestModelPanel.cs" />
+     <Compile Include="Assets\Scripts\UI\PopUp\WarningPopup.cs" />
      <Compile Include="Assets\Scripts\UI\PopUp\ZombiePopup.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
