@@ -86,11 +86,16 @@ public class Piece : MonoBehaviour {
 		Debug.Log (characterName + " has taken " + damage + " damage, his health is now  " + Health);
 	}
 
+	public void Kill(){
+		Destroy (gameObject);
+
+	}
+
 	void Update(){
 
 		if (Health <= 0) {
 
-			Destroy (gameObject);
+			Kill();
 
 
 		}

@@ -15,6 +15,7 @@ public class GasStation : MonoBehaviour {
 
 
 	public int peopleInGasStation;
+	public List<GameObject> peopleInLocation = new List<GameObject>();
 
 	public GameObject zombieTileW1;
 	public GameObject zombieTileW2;
@@ -68,6 +69,7 @@ public class GasStation : MonoBehaviour {
 		if (target.tag == "Player") {
 			peopleInGasStation += 1;
 			target.GetComponent<Piece> ().currentLocation = "GasStation";
+			peopleInLocation.Add (target.gameObject);
 
 
 			Debug.Log ("People in GasStation = " + peopleInGasStation + " " + target.name);
@@ -79,6 +81,7 @@ public class GasStation : MonoBehaviour {
 	void OnTriggerExit(Collider target){
 		if (target.tag == "Player") {
 			peopleInGasStation -= 1;
+			peopleInLocation.Remove (target.gameObject);
 			Debug.Log ("People in gas station" + peopleInGasStation);
 		}
 	}

@@ -16,6 +16,8 @@ public class Hospital : MonoBehaviour {
 	//Add more zombie tiles by adding on the game object
 
 	public int peopleInHospital;
+	public List<GameObject> peopleInLocation = new List<GameObject>();
+
 	public GameObject zombieTileW1;
 	public GameObject zombieTileW2;
 	public GameObject zombieTileW3;
@@ -71,6 +73,7 @@ public class Hospital : MonoBehaviour {
 	void OnTriggerEnter(Collider target){
 		if (target.tag == "Player") {
 			peopleInHospital += 1;
+			peopleInLocation.Add (target.gameObject);
 			target.GetComponent<Piece> ().currentLocation = "Hospital";
 			Debug.Log ("People in hospital = " + peopleInHospital + " " + target.name);
 
@@ -81,6 +84,7 @@ public class Hospital : MonoBehaviour {
 	void OnTriggerExit(Collider target){
 		if (target.tag == "Player") {
 			peopleInHospital -= 1;
+			peopleInLocation.Remove (target.gameObject);
 			Debug.Log ("People in Hospital =" + peopleInHospital);
 		}
 	}
