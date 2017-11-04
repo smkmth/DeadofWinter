@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: b121e12f3500dde42b5c6ba2496ec191
-timeCreated: 1509523627
+guid: cfd6f9152a7e76848b307515e2449a45
+timeCreated: 1509556127
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName: {}
@@ -51,53 +51,25 @@ TextureImporter:
   textureFormatSet: 0
   platformSettings:
   - buildTarget: DefaultTexturePlatform
-<<<<<<< HEAD:Assets/Sprites/Inventory/item-food.png.meta
     maxTextureSize: 2048
-=======
-    maxTextureSize: 64
->>>>>>> GameOver:Assets/Sprites/Inventory/item-food.png.meta
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
   - buildTarget: Standalone
-<<<<<<< HEAD:Assets/Sprites/Inventory/item-food.png.meta
-    maxTextureSize: 2048
-=======
-    maxTextureSize: 64
->>>>>>> GameOver:Assets/Sprites/Inventory/item-food.png.meta
-    textureFormat: -1
-    textureCompression: 2
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-  - buildTarget: iPhone
     maxTextureSize: 2048
     textureFormat: -1
-    textureCompression: 2
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-  - buildTarget: Android
-    maxTextureSize: 2048
-    textureFormat: -1
-    textureCompression: 2
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
   - buildTarget: WebGL
-<<<<<<< HEAD:Assets/Sprites/Inventory/item-food.png.meta
     maxTextureSize: 2048
-=======
-    maxTextureSize: 64
->>>>>>> GameOver:Assets/Sprites/Inventory/item-food.png.meta
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0

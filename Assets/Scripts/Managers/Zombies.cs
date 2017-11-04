@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
@@ -58,7 +59,7 @@ public class Zombies : MonoBehaviour {
 				Debug.Log ("Zombie placed here" + location);
 			} else {
 
-				LocationOverrun ("Colany");
+				LocationOverrun ("Colany", _Colany.peopleInLocation);
 
 			}
 
@@ -76,7 +77,7 @@ public class Zombies : MonoBehaviour {
 					Debug.Log ("Zombie placed here" + location);
 				} else {
 
-					LocationOverrun ("GroceryStore");
+				LocationOverrun ("GroceryStore", _GroceryStore.peopleInLocation);
 				
 				}
 			}
@@ -93,7 +94,7 @@ public class Zombies : MonoBehaviour {
 					Debug.Log ("Zombie placed here" + location);
 				} else {
 
-					LocationOverrun ("Hospital");
+				LocationOverrun ("Hospital", _Hospital.peopleInLocation );
 
 				}
 			}
@@ -108,16 +109,23 @@ public class Zombies : MonoBehaviour {
 				_GasStation.GasStationCoords.Remove (location);
 				Debug.Log ("Zombie placed here" + location);
 			} else {
+				
+				LocationOverrun ("GasStation", _GasStation.peopleInLocation);
+					
+				}
 
-				LocationOverrun ("GasStation");
 
-			}
+
+
 		}
 	}
 
 
-	public void LocationOverrun (string overrunLocation){
+	public void LocationOverrun (string overrunLocation, List<GameObject> targets){
 		Debug.Log (overrunLocation + "IS OVERRUNN!");
+		foreach (GameObject piece in targets){
+			piece.GetComponent<Piece>().Kill ();
+		}
 	}
 
 	public void ZombieFight(string playerName, string playerLocation, GameObject zombie){

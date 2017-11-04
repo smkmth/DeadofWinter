@@ -46,12 +46,16 @@ public class CharStatsGui : MonoBehaviour {
 	public Text Description;
 	public Text Health;
 	
-	public void DisplayStats(Character _Character){
+	public void DisplayStats(Character _Character, GameObject _Piece){
 		StatPanel.SetActive (true);
 		Name.text = _Character.Name;
 		Description.text = _Character.CharacterDescription;
+<<<<<<< HEAD
 		Health.text = _Character.Health.ToString ();
 >>>>>>> master
+=======
+		Health.text = "Health: " + _Piece.GetComponent<Piece> ().Health.ToString();
+>>>>>>> GameOver
 
 	}
 

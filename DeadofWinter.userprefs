@@ -1,7 +1,8 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\UI\OnScreen\CharStatsGui.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Managers\Actions\Movement.cs">
     <Files>
+<<<<<<< HEAD
       <File FileName="Assets\Scripts\Managers\EventManager.cs" Line="1" Column="1" />
 <<<<<<< HEAD
       <File FileName="Assets\Scripts\Managers\GameState.cs" Line="49" Column="4" />
@@ -16,15 +17,27 @@
       <File FileName="Assets\Scripts\UI\OnScreen\InventoryGui.cs" Line="56" Column="3" />
       <File FileName="Assets\Scripts\UI\OnScreen\CharStatsGui.cs" Line="16" Column="4" />
 =======
+=======
+>>>>>>> GameOver
       <File FileName="Assets\Scripts\Managers\GameState.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Managers\EventManager.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Managers\Actions\ItemActions.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Managers\Input\PlayerControl.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Managers\Actions\Movement.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Managers\Actions\Movement.cs" Line="54" Column="1" />
       <File FileName="Assets\Scripts\Managers\DDOL.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\ScriptableObjects\Weapon.cs" Line="1" Column="1" />
+<<<<<<< HEAD
       <File FileName="Assets\Scripts\ScriptableObjects\Tool.cs" Line="8" Column="2" />
       <File FileName="Assets\Scripts\UI\OnScreen\CharStatsGui.cs" Line="4" Column="1" />
 >>>>>>> master
+=======
+      <File FileName="Assets\Scripts\ScriptableObjects\Tool.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\UI\OnScreen\CharStatsGui.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\UI\OnScreen\InventoryGui.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\GameObjects\Piece.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\UI\OnScreen\EndTurnButton.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\UI\PopUp\WarningPopup.cs" Line="1" Column="1" />
+>>>>>>> GameOver
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

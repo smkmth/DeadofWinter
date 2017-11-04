@@ -14,6 +14,7 @@ using UnityEngine;
 public class Colany : MonoBehaviour {
 
 	public int peopleInColany;
+	public List<GameObject> peopleInLocation = new List<GameObject>();
 
 	public GameObject zombieTileW1;
 	public GameObject zombieTileW2;
@@ -73,6 +74,7 @@ public class Colany : MonoBehaviour {
 			peopleInColany += 1;
 			target.GetComponent<Piece> ().currentLocation = "Colany";
 
+			peopleInLocation.Add(target.gameObject);
 
 			Debug.Log ("People in colany = " + peopleInColany + " " + target.name);
 
@@ -82,6 +84,9 @@ public class Colany : MonoBehaviour {
 	void OnTriggerExit(Collider target){
 		if (target.tag == "Player") {
 			peopleInColany -= 1;
+			peopleInLocation.Remove (target.gameObject);
+
+			 //target.gameObject;
 			Debug.Log ("People in colany  =" + peopleInColany);
 		}
 	}

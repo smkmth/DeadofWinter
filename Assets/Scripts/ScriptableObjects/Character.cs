@@ -10,7 +10,7 @@ public class Character : ScriptableObject {
 
 	public string CharacterDescription;
 
-	public int Health;
+	public int MaxHealth;
 
 
 	public int AttackValue;

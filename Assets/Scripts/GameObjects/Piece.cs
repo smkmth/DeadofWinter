@@ -48,14 +48,14 @@ public class Piece : MonoBehaviour {
 >>>>>>> master
 		//Debug.Log (this.gameObject.name); 
 		hasMoved = false;
-		Health = _Character.Health;	
+		Health = _Character.MaxHealth;	
 		characterName = _Character.Name;
 		//Debug.Log ("Itesm number" + _Character.Inv.itemList.Count);
 		Noise = _Character.BaseNoise + _Character.Inv.itemList.Count;
 
 		if (_Character.bodyEquip == true) {
 			int tempvalue = _Character.bodyEquip.ArmourValue;
-			_Character.Health += tempvalue;
+			_Character.MaxHealth += tempvalue;
 		
 		}
 	}
@@ -83,11 +83,15 @@ public class Piece : MonoBehaviour {
 
 	public void CheckStats(){
 <<<<<<< HEAD
+<<<<<<< HEAD
 		
 		_CharStatsGui.DisplayStats (_Character);
 
 =======
 		_CharStatsGUI.DisplayStats (_Character);
+=======
+		_CharStatsGUI.DisplayStats (_Character, gameObject);
+>>>>>>> GameOver
 	}
 
 	public void ClearStats(){
@@ -101,11 +105,16 @@ public class Piece : MonoBehaviour {
 		Debug.Log (characterName + " has taken " + damage + " damage, his health is now  " + Health);
 	}
 
+	public void Kill(){
+		Destroy (gameObject);
+
+	}
+
 	void Update(){
 
 		if (Health <= 0) {
 
-			Destroy (gameObject);
+			Kill();
 
 
 		}
