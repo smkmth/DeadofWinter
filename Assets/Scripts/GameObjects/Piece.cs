@@ -26,7 +26,11 @@ public class Piece : MonoBehaviour {
 	public Character _Character;	//this is a generic reference to whatever character is set to 
 									//this object. 
 	public InventoryGui _InventoryGui;
+<<<<<<< HEAD
 	public CharStatsGui _CharStatsGui;
+=======
+	public CharStatsGui _CharStatsGUI;
+>>>>>>> master
 
 	public int Noise;
 
@@ -36,8 +40,12 @@ public class Piece : MonoBehaviour {
 		
 		//_PlayerControl = GameObject.Find("GameFlow").GetComponent<PlayerControl>();
 		_InventoryGui = GameObject.Find ("CharInventory").GetComponent<InventoryGui>();
+<<<<<<< HEAD
 		_CharStatsGui = GameObject.Find ("CharStats").GetComponent<CharStatsGui> ();
 
+=======
+		_CharStatsGUI = GameObject.Find ("CharStats").GetComponent<CharStatsGui>();
+>>>>>>> master
 		//Debug.Log (this.gameObject.name); 
 		hasMoved = false;
 		Health = _Character.Health;	
@@ -66,8 +74,7 @@ public class Piece : MonoBehaviour {
 		} else { 
 			Debug.Log("no Items");
 		}
-
-
+			
 	}
 
 	public void ClearInventory(){
@@ -75,9 +82,17 @@ public class Piece : MonoBehaviour {
 	}
 
 	public void CheckStats(){
+<<<<<<< HEAD
 		
 		_CharStatsGui.DisplayStats (_Character);
 
+=======
+		_CharStatsGUI.DisplayStats (_Character);
+	}
+
+	public void ClearStats(){
+		_CharStatsGUI.ClearStats ();
+>>>>>>> master
 	}
 
 	public void TakeDamage(int damage){

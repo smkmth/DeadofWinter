@@ -51,6 +51,7 @@ public class Movement : MonoBehaviour {
 		DeSelectedPiece = _PieceToDeSelect;
 		DeSelectedPiece.GetComponent<Renderer> ().material.color = Color.white;
 		DeSelectedPiece.GetComponent<Piece> ().ClearInventory ();
+		DeSelectedPiece.GetComponent<Piece> ().ClearStats ();
 
 	}
 
